@@ -11,19 +11,15 @@ stage ('echoing name'){
   sh """ echo `whoami`""" 
   }
   stage ('cloning reposatry from github'){ 
-    sh """cd ${rootdir} """
-    sh """echo `pwd`"""
     sh """ git clone https://github.com/devopsachin/Node.git """
   }
   
   
   
   stage ("deploying pod"){
+    sh """sudo docker build -t employee:latest ."""
     sh """ sudo kubectl apply -f `pwd`/Node/sample.yml """
-  }
-  stage ('deleting repo'){
-    sh """s """
-  }
+
   }
  return this 
 
