@@ -8,9 +8,12 @@ node {
 
 stage ('echoing name'){
   sh """ echo sachin"""
+  sh """ echo `whoamin`"""
+  sh """ 
   }
   stage ('cloning reposatry from github'){ 
     sh """cd ${rootdir} """
+    sh """echo `pwd`"""
     sh """ git clone https://github.com/devopsachin/Node.git """
   }
   }
