@@ -5,7 +5,7 @@ var BSON = require('mongodb').BSON;
 var ObjectID = require('mongodb').ObjectID;
 
 EmployeeProvider = function(host, port) {
-  this.db= new Db('node-mongo-employee', new Server('172.31.18.130', 27017, {safe: false}, {auto_reconnect: true}, {}));
+  this.db= new Db('node-mongo-employee', new Server('52.24.210.189', 27017, {safe: false}, {auto_reconnect: true}, {}));
   this.db.open(function(){});
 };
 
