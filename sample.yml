@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: employee
-        image: devops1docker/devops1docker:latest
+        image: devops1docker/devops1docker:1.1
         imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
