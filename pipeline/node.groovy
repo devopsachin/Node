@@ -21,5 +21,6 @@ stage ('echoing name'){
     sh """ sudo kubectl apply -f `pwd`/Node/sample.yml """
 
   }
+}
  return this 
 
