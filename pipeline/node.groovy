@@ -17,6 +17,7 @@ stage ('echoing name'){
   
   
   stage ("deploying pod"){
+    sh """cd /var/lib/jenkins/workspace/node-pipline/Node"""
     sh """sudo docker build -t employee:latest ."""
     sh """ sudo kubectl apply -f `pwd`/Node/sample.yml """
 
