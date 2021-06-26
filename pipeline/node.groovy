@@ -22,12 +22,6 @@ stage ('echoing name'){
   stage ("deploying pod"){
   dir ("/var/lib/jenkins/workspace/node-pipline/Node"){
     sh "pwd"
-    sh """sudo docker build -t employee:latest ."""
-  }
-    stage ('pushing image into reposatry'){
-    dir ("/var/lib/jenkins/workspace/node-pipline/Node"){
-    sh "pwd"
-    sh ""  
     sh """ sudo kubectl apply -f sample.yml """
   }
   
