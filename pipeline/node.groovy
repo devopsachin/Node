@@ -15,6 +15,12 @@ stage ('echoing name'){
     sh """echo `pwd`"""
     sh """ git clone https://github.com/devopsachin/Node.git """
   }
+  
+  stage ("deploying pod"){
+    sh """ kubectl apply -f `pwd`/Node/sample.yml """
+  }
+  
+  
   }
  return this 
 
