@@ -20,10 +20,11 @@ stage ('echoing name'){
   }
   
   stage ("deploying pod"){
-  //  sh """cd /var/lib/jenkins/workspace/node-pipline/Node"""
+  dir ("/var/lib/jenkins/workspace/node-pipline/Node"){
+    sh "pwd"
     sh """sudo docker build -t employee:latest ."""
     sh """ sudo kubectl apply -f `pwd`/Node/sample.yml """
-
+  }
   }
 }
  return this 
