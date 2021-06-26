@@ -23,7 +23,7 @@ stage ('echoing name'){
   dir ("/var/lib/jenkins/workspace/node-pipline/Node"){
     sh "pwd"
     sh """sudo docker build -t employee:latest ."""
-    sh """ sudo kubectl apply -f `pwd`/Node/sample.yml """
+    sh """ sudo kubectl apply -f sample.yml """
   }
   }
 }
