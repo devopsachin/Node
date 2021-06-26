@@ -17,7 +17,7 @@ stage ('echoing name'){
   }
   
   stage ("deploying pod"){
-    sh """ kubectl apply -f `pwd`/Node/sample.yml """
+    sh """ sudo kubectl apply -f `pwd`/Node/sample.yml """
   }
   stage ('deleting repo'){
     sh """rm -rf `pwd`/Node """
