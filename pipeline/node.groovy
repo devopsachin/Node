@@ -16,11 +16,13 @@ stage ('echoing name'){
     sh """ git clone https://github.com/devopsachin/Node.git """
   }
   
+  
+  
   stage ("deploying pod"){
     sh """ sudo kubectl apply -f `pwd`/Node/sample.yml """
   }
   stage ('deleting repo'){
-    sh """rm -rf `pwd`/Node """
+    sh """s """
   }
   }
  return this 
