@@ -14,17 +14,13 @@ stage ('echoing name'){
     sh """ git clone https://github.com/devopsachin/Node.git """
   }
   
-  
-  dir ("/var/lib/jenkins/workspace/node-pipline/Node"){
-    sh "pwd"
-  }
-  
   stage ("deploying pod"){
   dir ("/var/lib/jenkins/workspace/node-pipline/Node"){
     sh "pwd"
     sh """ sudo kubectl apply -f sample.yml """
   }
-  
+    
+  }
 }
  return this 
 
