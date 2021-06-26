@@ -32,5 +32,4 @@ spec:
     #targetPort: 3000
     nodePort: 30001
   type: LoadBalancer
-  externalIPs:
-  - 35.162.153.9
+
